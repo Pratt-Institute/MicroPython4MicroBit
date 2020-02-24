@@ -5,6 +5,9 @@ from microbit import *
 
 # The radio won't work unless it's switched on.
 radio.on()
+# pick a channel to transmit on:
+# integer value from 0 to 83 (inclusive)
+radio.config(channel=2)
 
 # Event loop.
 while True:
@@ -16,3 +19,6 @@ while True:
     if incoming == 'hello':
         # Show happy face if received hello 
         display.show(Image.HAPPY, delay=100, wait=False)
+    if button_b.was_pressed():
+        display.clear()
+

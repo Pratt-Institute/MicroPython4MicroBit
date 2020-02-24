@@ -9,6 +9,9 @@ radio.config(channel=7)
 
 # Event loop.
 while True:
-    incoming = radio.receive()
-    if incoming:
-        display.show(incoming)
+    data = accelerometer.get_values()
+    print((data))
+    radio.send(str(data))
+    sleep(1000)
+
+

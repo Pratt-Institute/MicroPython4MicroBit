@@ -7,7 +7,7 @@ from microbit import *
 radio.on()
 # pick a channel to transmit on:
 # integer value from 0 to 83 (inclusive)
-radio.config(channel=2)
+radio.config(channel=7)
 
 # Event loop.
 while True:
